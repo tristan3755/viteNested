@@ -1,0 +1,41 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+@mixin slider {
+  .glide{
+    margin: auto;
+    width: 100%;
+    height: auto;
+      .glide__slide{
+        position: relative;
+        background-color: #502c2c;
+        display: flex;
+        height: 50vh;
+       img{
+        position: absolute;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+       }
+      }
+  }
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+@include slider;
+}
+#app2{
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #502c2c;
+  margin-top: 60px;
+  background-color: red;
+  @include slider;
+}
